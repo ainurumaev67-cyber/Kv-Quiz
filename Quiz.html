@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <body bgcolor="#7ed895">
+        <img src="quiz.png">
+        <h1>ВИКТОРИНА/QUIZ</h1>
+       <button onclick=quiz() style="background: rgb(9, 128, 255); width: 270px; height: 50px; font-size: 55; font-weight: bold; color: rgb(0, 0, 0); border: 0;">Начать игру</button>
+        <script>
+            for (let i=0; i>15; i--) {
+                confirm("тебе "+ i +" лет?");
+            }
+                
+            
+            function quiz() {
+                var questions = [
+                    { 
+                        question: "Сколько дней в году?\n(a) 360\n(b) 370\n(c) 365",
+                        answer: "c"
+                    },
+
+                    {
+                        question: "В каком году основан Санкт-петербург?\n(a) 1113\n(b) 1703\n(c) 1884",
+                        answer: "b"
+                    },
+
+                    {
+                        question: "Сколько лет Илону Маску?\n(a) 50\n(b) 55\n(c) 40",
+                        answer: "b"
+                    },
+
+                    {
+                        question: "Через сколько РКН разблокировал роблокс?\n(a) 6 мес 7 дн\n(b) 9 мес 23 дн\n(c) 1 год",
+                        answer: "a"
+                    },
+
+                    {
+                        question: "Как раньше называлась Квантастика?\n(a) Квантовая технология\n(b) Код класс\n(c) Раньше не было другово",
+                        answer: "b"
+                    },
+
+                    {
+                        question: "Когда появился 67?\n(a) 2025\n(b) 2026\n(c) 2027",
+                        answer: "a"
+                    },
+
+                    {
+                        question: "Как называется язык стилей сайта?\n(a) HTML\n(b) JS\n(c) CSS",
+                        answer: "c"
+                    }
+                ]
+                var score = 0
+                for(let i=0; i < questions.length; i++) {
+                    var response = prompt(questions[i].question);
+                    if(response == questions[i].answer) {
+                        score++
+                        alert("Верно!");
+                    } else {
+                        alert("Неверно!")
+                    }
+                }
+                alert("Игра окнчена, У вас: "+ score +" очков")
+            }
+        </script>
+    </body>
+</html>
